@@ -14,6 +14,6 @@ juce_add_plugin(MiraForge
   COPY_PLUGIN_AFTER_BUILD TRUE
   PLUGIN_MANUFACTURER_CODE MfAu PLUGIN_CODE MrFg
   FORMATS VST3 AU Standalone PRODUCT_NAME "MiraForge")
-target_sources(MiraForge PRIVATE Source/PluginProcessor.cpp Source/PluginProcessor.h Source/PluginEditor.cpp Source/PluginEditor.h)
+target_sources(MiraForge PRIVATE PluginProcessor.cpp PluginProcessor.h PluginEditor.cpp PluginEditor.h)
 target_compile_definitions(MiraForge PRIVATE JUCE_WEB_BROWSER=0 JUCE_USE_CURL=0 JUCE_VST3_CAN_REPLACE_VST2=0)
 target_link_libraries(MiraForge PRIVATE juce::juce_audio_utils juce::juce_dsp juce::juce_recommended_config_flags juce::juce_recommended_lto_flags juce::juce_recommended_warning_flags)
